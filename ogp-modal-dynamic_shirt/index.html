@@ -1,0 +1,135 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <a class="post-link" href="#{{ post.title }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+
+
+<div class='modal-wrapper' id="modal1">
+  <article class="modal">
+  <a class='close' href="#"><span>x</span></a>
+    
+    <div id='tshirt-color' class='sprite color color-yellow'>
+      <div class='tshirt-logo'>
+        <img class="logo logo-ogp" id='tshirt-logo'>
+      </div>
+    </div>
+    
+    <section class="shirt-description">
+      <nav class='shirt-change color-nav'>
+        <h1>color:</h1>
+        <a onclick="changeShirtColor_sprite('black', this)">black</a>
+        <a onclick="changeShirtColor_sprite('gray', this)">gray</a>
+        <a onclick="changeShirtColor_sprite('white', this)">white</a>
+        <a onclick="changeShirtColor_sprite('navy', this)">navy</a>
+        <a onclick="changeShirtColor_sprite('red', this)">red</a>
+        <a selected="selected" onclick="changeShirtColor_sprite('yellow', this)">yellow</a>
+      </nav>
+      <nav class='shirt-change logo-nav'>
+        <h1>logo:</h1>
+        <a onclick="changeShirtLogo_sprite('none', this)">none</a>
+        <a onclick="changeShirtLogo_sprite('chiraq', this)">chiraq</a>
+        <a onclick="changeShirtLogo_sprite('nightday', this)">nightday</a>
+        <a selected="selected" onclick="changeShirtLogo_sprite('ogp', this)">ogp</a>
+      </nav>
+    </section>
+  </article>
+</div>
+
+<div class='modal-wrapper' id="modal2">
+  <article class="modal">
+  <a class='close' href="#"><span>x</span></a>
+  
+    <div id='tshirt-color' class='sprite color color-black'></div>
+    
+    <div class='tshirt-logo'>
+      <img class="logo" id='tshirt-logo'>
+    </div>
+    
+    <section class="shirt-description">
+      <nav class='tshirt-change color-nav'>
+        <h1>color:</h1>
+        <a onclick="changeShirtColor_sprite('black')">black</a>
+        <a onclick="changeShirtColor_sprite('gray')">gray</a>
+        <a onclick="changeShirtColor_sprite('white')">white</a>
+        <a onclick="changeShirtColor_sprite('navy')">navy</a>
+        <a onclick="changeShirtColor_sprite('red')">red</a>
+        <a onclick="changeShirtColor_sprite('yellow')">yellow</a>
+      </nav>
+      <nav class='tshirt-change logo-nav'>
+        <h1>logo:</h1>
+        <a onclick="changeShirtLogo_sprite('none')">none</a>
+        <a onclick="changeShirtLogo_sprite('chiraq')">chiraq</a>
+        <a onclick="changeShirtLogo_sprite('nightday')">nightday</a>
+        <a onclick="changeShirtLogo_sprite('ogp')">ogp</a>
+      </nav>
+    </section>
+  </article>
+</div>
+
+<!--
+To Do
+
+  ? option
+    http://stackoverflow.com/questions/4590311/set-option-selected-attribute-from-dynamic-created-option
+    selected attribute javascript
+    selected attribute
+    https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute
+    js setattribute
+    http://www.w3schools.com/jsref/dom_obj_link.asp
+    js link element
+    http://www.quirksmode.org/js/this.html
+    http://stackoverflow.com/questions/3652659/get-the-element-that-triggers-a-javascript-function
+    https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+    js select the element that triggered the function -jquery
+    http://www.w3schools.com/js/js_htmldom_elements.asp
+    js element
+
+
+
+  
+  sprites
+    http://www.spritecow.com/
+    http://spritegen.website-performance.org/
+
+  modal
+    http://www.w3schools.com/cssref/sel_target.asp
+    http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_target_modal
+    http://drublic.github.io/css-modal/#!
+    http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/
+    http://paulrhayes.com/2011-03/css-modal/
+      http://paulrhayes.com/experiments/modal/#close
+
+  form
+    http://www.w3schools.com/html/html_form_elements.asp
+
+  input
+    http://www.w3schools.com/tags/tag_input.asp
+
+  svg
+    http://www.w3schools.com/svg/svg_inhtml.asp
+    https://css-tricks.com/using-svg/
+    http://davidensinger.com/2014/11/how-to-dynamically-include-svgs-inline-with-jekyll/    
+
+
+
+-->

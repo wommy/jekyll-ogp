@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8" />
+<style type="text/css">
+body{
+	font-family:sans-serif;
+	margin:0;
+}
+#modal1{
+	top:0;
+	left:0;
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#modal2{
+	top:0;
+	left:0;
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#modal1:target{
+	display: block;
+}
+#modal2:target{
+	display: block;
+}
+#modal1 article,
+#modal2 article{
+	height: 75%;
+	width: 75%;
+	margin:3%;
+	vertical-align: middle;
+	background-color: white;
+	border-radius: 1rem;
+	padding: 1rem;
+}
+#modal1 .close,
+#modal2 .close{
+	position: relative;
+	float:right;
+	top: -2.5rem;
+	right: -2.5rem;
+	border: .375rem solid black;
+	border-radius: 4rem;
+	height: 2.5rem;
+	width: 2.5rem;
+	text-decoration: none;
+	background-color: white;
+	font-weight: bold;
+}
+.close p{
+	font-size: 1.5rem;
+	padding: .25rem;
+	text-transform: uppercase;
+	margin: 0;
+	position: relative;
+	top:.2rem;
+	left:.5rem;
+}
+#modal1 .close:link,
+#modal1 .close:visited{
+	color:black;
+}
+#modal1 .close:hover{
+	border-color:red;
+	color:red;
+	/*background-color:black;*/
+}
+#modal1 .close:active{
+	border-color:gray;
+	color:gray;
+	background-color:white;
+}
+#modal1 .tshirt-colorToggle{
+	/*background: url("tshirts/black.png") no-repeat fixed center;*/
+	height: 30rem;
+	width: 20rem;
+}
+#tshirt-logo{
+	height: 526px;
+	width: 540px;
+	position: relative;
+	top:-526px;
+	box-sizing: border-box;
+	padding: 7rem;
+}
+#tshirt-logo-img{
+	height:10rem;
+	width:20rem;
+	background-color: rgba(0, 255, 0, 0.2);
+}
+#tshirt-logo-img-test{
+	/*height:10rem;
+	width:10rem;*/
+	display: block;
+	background-size: contain;
+	background-image: url(assets/logo-svg/ogp.svg);
+}
+#modal1 #tshirt-color,
+#modal1 section{
+	display: inline-block;
+	vertical-align: top;
+}
+#modal1 section{
+	width: 60%;
+	position: absolute;
+	bottom:1rem;
+	right:5rem;
+}
+#modal1 nav a{
+	display: inline-block;
+	padding: .25rem;
+	border: .125rem solid black;
+	margin: .125rem;
+}
+#modal1 nav a:focus{
+	text-decoration: underline;
+	background-color: magenta;
+}
+#modal1 nav a:hover{
+	background-color: yellow;
+}
+#modal1 nav h1{
+	margin: 0;
+}
+#modal1 .tshirt-change > h1,
+#modal1 .tshirt-change > a{
+	display: inline-block;
+}
+#modal1 nav{
+	margin: 1rem;
+	display: block;
+}
+#modal1 section h1{
+	font-variant: small-caps;
+	font-size: 1.5rem;
+}
+.sprite {
+	background-repeat: no-repeat;
+	display: block;
+}
+.color {
+	background-image: url("assets/color-spritesheet.png");
+	width: 540px;
+	height: 526px;
+}
+	.color-black {
+		background-position: -5px -5px;
+	}
+	.color-gray {
+		background-position: -555px -5px;
+	}
+	.color-navy {
+		background-position: -5px -541px;
+	}
+	.color-red {
+		background-position: -555px -541px;
+	}
+	.color-white {
+		background-position: -1105px -5px;
+	}
+	.color-yellow {
+		background-position: -1105px -541px;
+	}
+.logo {
+	/*background-image: url("assets/logo-spritesheet.png");*/
+	background-size: contain;
+}
+	.logo-none {
+		display: none;
+	}
+	.logo-chiraq{
+		/*background-position: -5px -5px;*/
+		background: url(assets/logo-svg/chiraq.svg);
+	}
+
+	.logo-nightday{
+		/*background-position: -2215px -5px;*/
+		background: url(assets/logo-svg/nightday.svg);
+	}
+
+	.logo-ogp{
+		/*background-position: -2215px -609px;*/
+		background: url(assets/logo-svg/ogp.svg);
+	}
+</style>
+<script type="text/javascript">
+function CS_color( obj ){
+	// var shirt_color = ['black','gray','white','navy','red','yellow']
+	var shirt_color = obj;
+	document.getElementById("tshirt-IMG").src="tshirts/"+shirt_color+".png";
+}
+function changeShirtColor_sprite( obj ){
+	// var shirt_color = ['black','gray','white','navy','red','yellow']
+	var shirt_color = obj;
+	document.getElementById("tshirt-color").className="sprite color color-"+shirt_color;
+}
+function changeShirtLogo_sprite( obj ){
+	// var shirt_color = ['black','gray','white','navy','red','yellow']
+	var shirt_logo = obj;
+	document.getElementById("tshirt-logo-img").className="logo logo-"+shirt_logo;
+}
+</script>
+<ul>
+	<li><h1><a href="#modal1">butts</a></h1></li>
+	<li><h1><a href="#modal2">and farts</a></h1></li>
+	<li><h1><a href="#id2">and butts</a></h1></li>
+	<li><h1><a href="#id3">and farts</a></h1></li>
+</ul>
+
+<div id="modal1">
+	<article>
+		<a class='close' href="#"><p>x</p></a>
+		<!-- <div class='tshirt-colorToggle'></div> -->
+		<!-- <img id='tshirt-IMG' src='tshirts/black.png'> -->
+		<div id='tshirt-color' class='sprite color color-black'></div>
+		<div id='tshirt-logo'>
+			<img id='tshirt-logo-img'>
+			<img id='tshirt-logo-img-test' src="assets/logo-svg/ogp.svg">
+		</div>
+		<section>
+			<!-- <h1>tshirts</h1> -->
+			<nav class='tshirt-change color-nav'>
+				<h1>color:</h1>
+				<a onclick="changeShirtColor_sprite('black')">black</a>
+				<a onclick="changeShirtColor_sprite('gray')">gray</a>
+				<a onclick="changeShirtColor_sprite('white')">white</a>
+				<a onclick="changeShirtColor_sprite('navy')">navy</a>
+				<a onclick="changeShirtColor_sprite('red')">red</a>
+				<a onclick="changeShirtColor_sprite('yellow')">yellow</a>
+			</nav>
+			<!-- <nav class='tshirt-change size'>
+				<h1>size</h1>
+				<a>small</a>
+				<a>medium</a>
+				<a>large</a>
+				<a>XL</a>
+				<a>XXL</a>
+				<a>XXXL</a>
+			</nav>
+			 -->
+			<nav class='tshirt-change logo-nav'>
+				<h1>logo:</h1>
+				<a onclick="changeShirtLogo_sprite('none')">none</a>
+				<!-- <h1>svg:</h1><a>chiraq</a><a>night+day</a><a>ogp</a><br> -->
+				<!-- <h1>png:</h1> -->
+				<a onclick="changeShirtLogo_sprite('chiraq')">chiraq</a>
+				<a onclick="changeShirtLogo_sprite('nightday')">nightday</a>
+				<a onclick="changeShirtLogo_sprite('ogp')">ogp</a>
+			</nav>
+		</section>
+	</article>
+</div>
+
+<div id="modal2">
+	<article>
+		<a class='close' href="#"><p>x</p></a>
+		<!-- <div class='tshirt-colorToggle'></div> -->
+		<!-- <img id='tshirt-IMG' src='tshirts/black.png'> -->
+		<div id='tshirt-color' class='sprite color color-black'></div>
+		<div id='tshirt-logo'>
+			<img id='tshirt-logo-img'>
+			<img id='tshirt-logo-img-test' src="assets/logo-svg/ogp.svg">
+		</div>
+		<section>
+			<!-- <h1>tshirts</h1> -->
+			<nav class='tshirt-change color-nav'>
+				<h1>color:</h1>
+				<a onclick="changeShirtColor_sprite('black')">black</a>
+				<a onclick="changeShirtColor_sprite('gray')">gray</a>
+				<a onclick="changeShirtColor_sprite('white')">white</a>
+				<a onclick="changeShirtColor_sprite('navy')">navy</a>
+				<a onclick="changeShirtColor_sprite('red')">red</a>
+				<a onclick="changeShirtColor_sprite('yellow')">yellow</a>
+			</nav>
+			<!-- <nav class='tshirt-change size'>
+				<h1>size</h1>
+				<a>small</a>
+				<a>medium</a>
+				<a>large</a>
+				<a>XL</a>
+				<a>XXL</a>
+				<a>XXXL</a>
+			</nav>
+			 -->
+			<nav class='tshirt-change logo-nav'>
+				<h1>logo:</h1>
+				<a onclick="changeShirtLogo_sprite('none')">none</a>
+				<!-- <h1>svg:</h1><a>chiraq</a><a>night+day</a><a>ogp</a><br> -->
+				<!-- <h1>png:</h1> -->
+				<a onclick="changeShirtLogo_sprite('chiraq')">chiraq</a>
+				<a onclick="changeShirtLogo_sprite('nightday')">nightday</a>
+				<a onclick="changeShirtLogo_sprite('ogp')">ogp</a>
+			</nav>
+		</section>
+	</article>
+</div>
+
+<!--
+To Do
+	
+	sprites
+		http://www.spritecow.com/
+		http://spritegen.website-performance.org/
+
+	modal
+		http://www.w3schools.com/cssref/sel_target.asp
+		http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_target_modal
+		http://drublic.github.io/css-modal/#!
+		http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/
+		http://paulrhayes.com/2011-03/css-modal/
+			http://paulrhayes.com/experiments/modal/#close
+
+-->

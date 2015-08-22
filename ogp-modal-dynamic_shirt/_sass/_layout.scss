@@ -1,0 +1,428 @@
+/**
+ * Site header
+ */
+.site-header {
+    border-top: 5px solid $grey-color-dark;
+    border-bottom: 1px solid $grey-color-light;
+    min-height: 56px;
+
+    // Positioning context for the mobile navigation icon
+    position: relative;
+}
+
+.site-title {
+    font-size: 26px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left;
+
+    &,
+    &:visited {
+        color: $grey-color-dark;
+    }
+}
+
+.site-nav {
+    float: right;
+    line-height: 56px;
+
+    .menu-icon {
+        display: none;
+    }
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 9px;
+        right: 30px;
+        background-color: $background-color;
+        border: 1px solid $grey-color-light;
+        border-radius: 5px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $grey-color-dark;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 10px;
+        }
+    }
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+    border-top: 1px solid $grey-color-light;
+    padding: $spacing-unit 0;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: $grey-color;
+    margin-left: -$spacing-unit / 2;
+    @extend %clearfix;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
+    width:         calc(35% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
+    width:         calc(20% - (#{$spacing-unit} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+    width:         calc(45% - (#{$spacing-unit} / 2));
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+
+
+/**
+ * Page content
+ */
+.page-content {
+    padding: $spacing-unit 0;
+}
+
+.page-heading {
+    font-size: 20px;
+}
+
+.post-list {
+    margin-left: 0;
+    list-style: none;
+
+    > li {
+        margin-bottom: $spacing-unit;
+    }
+}
+
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+
+.post-link {
+    display: block;
+    font-size: 24px;
+}
+
+
+
+/**
+ * Posts
+ */
+.post-header {
+    margin-bottom: $spacing-unit;
+}
+
+.post-title {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    @include media-query($on-laptop) {
+        font-size: 36px;
+    }
+}
+
+.post-content {
+    margin-bottom: $spacing-unit;
+
+    h2 {
+        font-size: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 28px;
+        }
+    }
+
+    h3 {
+        font-size: 26px;
+
+        @include media-query($on-laptop) {
+            font-size: 22px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+}
+
+/************
+ * TOM LAYOUT
+ ***********/
+
+#modal1:target,
+#modal2:target{
+    display: block;
+}
+
+.modal-wrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    .modal{
+        max-height: 85%;
+        // width: 75%;
+        margin: 3%;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .close{
+        position: relative;
+        float:right;
+        top: -2.5rem;
+        right: -2.5rem;
+        border: .375rem solid black;
+        border-radius: 4rem;
+        height: 2.5rem;
+        width: 2.5rem;
+        text-decoration: none;
+        background-color: white;
+        font-weight: bold;
+
+        &:link,
+        &:visited{
+            color:black;
+        }
+
+        &:hover{
+            border-color:red;
+            color:red;
+        }
+
+        &:active{
+            border-color:gray;
+            color:gray;
+            background-color:white;
+        }
+
+        span{
+            font-size: 1.5rem;
+            padding: .25rem;
+            text-transform: uppercase;
+            margin: 0;
+            position: relative;
+            top:.2rem;
+            left:.5rem;
+        }
+    }
+    
+    .sprite {
+        background-repeat: no-repeat;
+        display: block;
+    }
+
+    .color {
+        background-image: url("logo/color-spritesheet.png");
+        width: 540px;
+        height: 526px;
+    }
+        .color-black {
+            background-position: -5px -5px;
+        }
+        .color-gray {
+            background-position: -555px -5px;
+        }
+        .color-navy {
+            background-position: -5px -541px;
+        }
+        .color-red {
+            background-position: -555px -541px;
+        }
+        .color-white {
+            background-position: -1105px -5px;
+        }
+        .color-yellow {
+            background-position: -1105px -541px;
+        }
+
+    .tshirt-logo{
+        height: 526px;
+        width: 540px;
+        position: relative;
+        // top:-526px;
+        box-sizing: border-box;
+        padding: 7.5rem 10rem;
+
+        .logo {
+            height:10rem;
+            width:auto;
+            display: block;
+            background-size: contain;
+            //background-color: rgba(255, 255, 255, 0.3);
+            content:url('');
+            margin: auto;
+        }
+            .logo-none {
+                content:none;
+            }
+            .logo-chiraq{
+                content:url("logo/png/chiraq.png");
+            }
+
+            .logo-nightday{
+                content:url(logo/png/nightday.png);
+            }
+
+            .logo-ogp{
+                content:url('logo/png/ogp.png');
+            }
+        }
+    }
+    
+    .shirt-description{
+        // display: inline-block;
+        // vertical-align: top;
+        //OR
+        // width: 60%;
+        position: absolute;
+        top:20rem;
+        right:2rem;
+        vertical-align: top;
+
+        nav{
+            margin: 1rem;
+            display: block;
+            vertical-align: top;
+            padding: .5rem;
+            background-color:white;
+            border: solid black .25rem;
+            border-radius:1rem;
+
+            [selected]{
+                //border-color: $brand-color;
+                color: $brand-color;
+                //background-color: #4cbb17;
+                background-color:white;
+                border:none;
+
+                //&:hover{}
+            }
+
+            a{
+                display: inline-block;
+                margin: .125rem;
+                padding: .25rem;
+                border: .125rem solid darkgray;
+                border-radius:.5rem;
+                color: darkgray;
+                cursor: pointer;
+
+                &:hover{
+                    color: $brand-color;
+                    //#FFFACD;
+                    text-decoration: none;
+                    border-color: black;
+                }
+
+                &:active{
+                    //text-decoration: underline;
+                    //background-color: #EACABB;
+                    background-color: #FFFACD;
+                }
+            }
+            
+            h1{
+                margin: 0;
+                display: inline-block;
+                font-variant: small-caps;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
