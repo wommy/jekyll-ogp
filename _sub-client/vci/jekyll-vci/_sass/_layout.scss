@@ -247,6 +247,11 @@
     .post-list li >:not(h2){
         margin-left: 1rem;
     }
+
+
+    @include media-query($on-palm) {
+        margin:.5rem;
+    }
 }
 
 .site-aside{
@@ -265,29 +270,97 @@
         // right:65rem;
     }
 
-    nav a{
-        display: block;
-        margin-left: 1rem;
+    nav i{
+        // text-align:center;
+        // display: inline-block;
+        // margin-left: 1rem;
     }
 
     form{
         background-color:#eef;
         border-radius:3px;
-        font-size: .8em;
         width: 15rem;
         margin: 1rem 0;
 
-        label,
-        input,
-        textarea,
-        input{
-            margin: .25rem;
-            padding-left:1rem;
-        }
+        div{
+            width: 90%;
+            margin: auto;
+            padding: 1rem 0;
 
-        input[type=checkbox]{
-            display: inline-block;
-            width: 3rem;
+            header{
+                font-size: 1.25rem;
+            }
+
+            span,
+            label,
+            textarea{
+                margin: .125rem;
+                // padding-left:1rem;
+                display: block;
+            }
+
+            span{
+
+                span,
+                input,
+                label{
+                    display: inline-block;
+                }
+
+                input[type=text]{
+                    width: 75%;
+                    margin-left: auto;
+                    float:right;
+                }
+
+                header{
+                    font-size: 1rem;
+                }
+
+                textarea{
+                    width: 95%;
+                    height: 3rem;
+                }
+
+                label{
+                    background-color: white;
+                    border:1px inset #F8F8F8;
+                    // border-radius:1px;
+
+                    font-size: .875rem;
+
+                    padding:.125rem .25rem;
+
+                    width: 27%;
+
+                    margin:auto;
+
+                    span,
+                    input{
+                        margin: .125rem;
+                    }
+                }
+            }
+
+            // input[type=submit]{
+            //     width: 3rem:
+            //     margin-left: 80%;
+            // }
+
+        }
+        
+        
+    }
+
+    @include media-query($on-palm) {
+        position: static;
+        // text-align: center;
+        width: auto;
+        margin: 0 .5rem;
+
+        form{
+            width: auto;
+            margin: .25rem;
         }
     }
 }

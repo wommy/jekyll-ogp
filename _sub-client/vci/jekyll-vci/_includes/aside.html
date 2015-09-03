@@ -8,12 +8,10 @@
 
   <nav class="contact-list">
     <!-- <li>{{ site.title }}</li> -->
-    <span>email:</span>
-    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-    <span>phone:</span>
-    <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
-    <span>address:</span>
-    <a href="{{ site.address_url }}">{{ site.address }}</a>
+    <i class="fa fa-phone"> - <a href="tel:{{ site.phone }}">{{ site.phone }}</a></i>
+    <i class="fa fa-envelope"> - <a href="mailto:{{ site.email }}">{{ site.email }}</a></i>
+    <i class="fa fa-map"> - <a href="{{ site.address_url }}">{{ site.address }}</a></i>
+    
   </nav>
 
   <!-- <ul class="social-media-list">
