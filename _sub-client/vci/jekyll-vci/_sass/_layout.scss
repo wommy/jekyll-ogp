@@ -208,7 +208,7 @@
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+    // margin-bottom: $spacing-unit;
 
     h2 {
         font-size: 32px;
@@ -248,6 +248,16 @@
         margin-left: 1rem;
     }
 
+    .post-list li{
+        background-color:$brand-color-orange-light;
+        border-radius:.5rem;
+        padding: .5rem;
+    }
+
+    .post-link{
+        color:$brand-color-orange-dark;
+    }
+
 
     @include media-query($on-palm) {
         margin:.5rem;
@@ -260,6 +270,7 @@
     width: 17rem;
     height: 100%;
     margin: 0 1rem;
+    letter-spacing: -1px;
     // font-size: .8em;
 
     .logo{
@@ -277,7 +288,7 @@
     }
 
     form{
-        background-color:#eef;
+        background-color:$grey-color-light;
         border-radius:3px;
         width: 15rem;
         margin: 1rem 0;
@@ -365,6 +376,13 @@
     }
 }
 
+.page-content{
+    margin-bottom: 0;
+}
 
+.site-footer-wommy{
+    text-align:right;
+    margin: 0 5rem 0 0;
+}
 
 

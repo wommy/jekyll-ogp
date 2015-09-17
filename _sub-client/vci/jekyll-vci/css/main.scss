@@ -28,6 +28,13 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 
+// wommy
+$brand-color-orange: #F1592A;
+$brand-color-orange-light: lighten($brand-color-orange, 8%);
+$brand-color-orange-dark: darken($brand-color-orange, 30%);
+
+
+
 
 // Using media queries with like this:
 // @include media-query($on-palm) {
