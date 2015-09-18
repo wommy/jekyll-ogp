@@ -54,6 +54,6 @@ $brand-color-orange-dark: darken($brand-color-orange, 30%);
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "layout-wommy",
+        "layout",
         "syntax-highlighting"
 ;

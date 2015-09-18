@@ -5,23 +5,11 @@
 
   <body>
 
-    {% comment %}
-      {% include header.html %}
-    {% endcomment %}
+    {% include header-wommy.html %}
 
-    {% include aside.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    {{ content }}
     
     {% include footer-wommy.html %}
-
-    {% comment %}
-    {% include footer.html %}
-    {% endcomment %}
 
   </body>
 
