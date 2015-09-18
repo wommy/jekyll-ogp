@@ -208,7 +208,7 @@
 }
 
 .post-content {
-    // margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit;
 
     h2 {
         font-size: 32px;
@@ -239,6 +239,10 @@
  * wommy
  ***********/
 
+.mobile{
+    display: none;
+}
+
 .header-wommy,
 .footer-wommy{
     position:fixed;
@@ -246,66 +250,52 @@
     box-sizing:border-box;
     z-index: 2;
     background-color:$brand-color-orange;
+    letter-spacing: -1px;
+    height: 1.5rem;
 }
 
 .header-wommy{
     top:0;
-    
-    height: 1.5rem;
     padding-bottom:.75rem;
-    
-    letter-spacing: -1px;
+}
 
-    .banner{
-        width: 20rem;
-        border:$brand-color-orange .5rem solid;
-        background-color:white;
-        margin-left: 2rem;
-        padding-bottom:.5rem;
-        height: 26rem;
+.banner{
+    width: 20rem;
+    border:$brand-color-orange .5rem solid;
+    background-color:white;
+    margin-left: 2rem;
+    padding-bottom:.5rem;
+    height: 26rem;
 
-        box-sizing:border-box;
+    box-sizing:border-box;
 
-        border-radius:1.5rem;
+    border-radius:1.5rem;
+}
 
-        .logo{
-            height:17rem;
-            width:17rem;
+.logo{
+    height:17rem;
+    width:17rem;
 
-            margin:.75rem;
+    margin:.75rem;
 
-            box-sizing:border-box;
+    box-sizing:border-box;
 
-            background-image: url("/css/vci.png");
-            background-size: 17rem 17rem;
-            display: block;
-        }
+    background-image: url("/css/vci.png");
+    background-size: 17rem 17rem;
+    display: block;
+}
 
-        .header-nav{
-            width: 90%;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items:center;
-            font-size: 1.125rem;
+.header-nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    font-size: 1.125rem;
 
-            a{
-                padding:.125rem;
-                margin: .25rem 0;
-            }
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: static;
-        // text-align: center;
-        width: auto;
-        margin: 0 .5rem;
-
-        form{
-            width: auto;
-            margin: .25rem;
-        }
+    a{
+        padding:.125rem;
+        margin: .25rem 0;
     }
 }
 
@@ -416,13 +406,37 @@
 .footer-wommy {
     bottom:0;
 
-    height: 3rem;
-    padding:1rem 0;
+    height: 1.5rem;
 
-    > *{
-        color:white;
-        padding-right:2rem;
-        float:right;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+
+    color:white;
+    text-shadow: 2px 2px 2px black;
+    // font-weight: bold;
+    // padding-right:.25rem;
+
+    // :first-child{
+    //     flex-grow: 6;
+    // }
+
+    // :last-child{
+    //     flex-grow: 4;
+    // }
+
+    :first-child,
+    :last-child{
+        margin:0 .75rem 0 0;
+    }
+
+    a{
+        color: white;
+        text-decoration: underline;
+
+        &:hover{
+            text-decoration: none;
+        }
     }
 }
 
@@ -432,6 +446,61 @@ body{
     // display: flex;
     // flex-direction: column;
     // justify-content: space-between;
+}
+
+@include media-query($on-palm) {
+    .content{
+        background: url("/css/construction4.jpg") no-repeat center fixed;
+        //, url("/css/construction2.jpg"), url("/css/construction4.jpg")
+        background-size: contain;
+        // background-color:gray;
+        height: 34rem;
+
+        .feed{
+            margin:1rem;
+            width: auto;
+            height: 30rem;
+        }
+    }
+    .banner,
+    article{
+        visibility: hidden;
+        margin:0;
+    }
+    .header-wommy,
+    .footer-wommy{
+        font-size: .75rem;
+        height: 1rem;
+    }
+
+    .header-wommy{
+        border-bottom:.5rem solid white;
+    }
+
+    .logo{
+        height: 10rem;
+        width: 10rem;
+        background-size: 10rem 10rem;
+        // position: absolute;
+        margin:auto;
+        background-color: white;
+        border-radius: 5rem;
+        visibility: visible;
+    }
+
+    .mobile{
+        display: block;
+        visibility: visible;
+        font-size: 2rem;
+        span{
+            padding:.5rem;
+            background-color:white;
+            border:.25rem solid $brand-color-orange;
+            border-radius:1rem;
+            color:black;
+        }
+    }
+
 }
 
 
