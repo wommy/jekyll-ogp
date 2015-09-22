@@ -7,7 +7,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://vcichicago.com" # the base hostname & protocol for your site
-phone: 773-555-5555
+phone: 773-851-2817
 address: "3756 w 80th, Chicago 60652"
 address_url: "https://www.google.com/maps?f=q&source=s_q&q=3756+W.+80th+St+Chicago+IL+60652"
 # twitter_username: jekyllrb

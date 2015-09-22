@@ -296,6 +296,10 @@
     a{
         padding:.125rem;
         margin: .25rem 0;
+
+        span{
+            margin-left: .75rem;
+        }
     }
 }
 
@@ -327,9 +331,11 @@
             top:10%;
             left:70%;
 
+            letter-spacing: -1px;
+
             // margin-left: 20%;
 
-            height: 20rem;
+            height: auto;
             width: 20rem;
 
             border:.5rem solid $brand-color-orange;
@@ -339,7 +345,7 @@
             border-radius:1.5rem;
 
             align-items:center;
-            font-size: 1.125rem;
+            font-size: 1.25rem;
 
             .row{
                 margin:.375rem;
@@ -348,35 +354,42 @@
 
                 label{
                     // background-color:red;
-                    border:1px solid black;
-                    // width: 62px;
+                    padding:2px 0;
+                    border:1px solid silver;
+                    width: 100%;
+                    margin: .25rem 0;
                     display: flex;
-                    align-items: center;
+                    border-radius:.5rem;
+                    font-size: 1.125rem;
                     input{
                         width: auto;
+                        height: 1.75rem;
                         cursor: pointer;
+                        margin: 0 .5rem 0 1rem;
                         // visibility: hidden;
                     }
-                    &[checked='checked']{
-                        // width: auto;
-                        background-color:yellow;
-                    }
-                    [checked='checked'] & {
-                        // width: auto;
-                        background-color:cyan;
-                    }
-                    & input[checked='checked']{
-                        background-color:red;
-                    }
-                    input[checked='checked'] & {
-                        background-color:lime;
-                    }
+                    // &[checked='checked']{
+                    //     // width: auto;
+                    //     background-color:yellow;
+                    // }
+                    // [checked='checked'] & {
+                    //     // width: auto;
+                    //     background-color:cyan;
+                    // }
+                    // & input[checked='checked']{
+                    //     background-color:red;
+                    // }
+                    // input[checked='checked'] & {
+                    //     background-color:lime;
+                    // }
                     cursor: pointer;
                 }
 
                 input,
-                textarea{
-                    width: 75%;
+                textarea,
+                .column{
+                    width: 70%;
+                    box-sizing:border-box;
                 }
             }
 
@@ -386,7 +399,7 @@
                 .submit-button{
                     height: 2rem;
                     width: 6rem;
-                    background: red;
+                    // background: red;
                     border-radius: 3px;
                 }
             }
@@ -394,10 +407,7 @@
             .column{
                 display: flex;
                 flex-direction: column;
-            }
-
-            label{
-                display: block;
+                align-items: center;
             }
         }    
     }
