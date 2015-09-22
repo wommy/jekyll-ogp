@@ -437,7 +437,7 @@
 
     :first-child,
     :last-child{
-        margin:0 .75rem 0 0;
+        margin:0 .5rem;
     }
 
     a{
@@ -475,7 +475,9 @@ body{
     .banner,
     article{
         visibility: hidden;
+        // display: none;
         margin:0;
+        // display: flex;
     }
     .header-wommy,
     .footer-wommy{
@@ -488,11 +490,13 @@ body{
     }
 
     .logo{
-        height: 10rem;
-        width: 10rem;
-        background-size: 10rem 10rem;
-        // position: absolute;
-        margin:auto;
+        height: 8rem;
+        width: 8rem;
+        background-size: 8rem 8rem;
+        position: relative;
+        top:-1rem;
+        // left:-.5rem;
+        margin-left:0;
         background-color: white;
         border-radius: 5rem;
         visibility: visible;
@@ -501,7 +505,11 @@ body{
     .mobile{
         display: block;
         visibility: visible;
-        font-size: 2rem;
+        font-size: 1.125rem;
+        position:relative;
+        top: -9rem;
+        right:-3rem;
+
         span{
             padding:.5rem;
             background-color:white;
@@ -510,6 +518,17 @@ body{
             color:black;
         }
     }
+
+    .header-nav a{
+        margin:.5rem;
+
+        .fa{
+            visibility: visible;
+            display: block;
+        }
+    }
+
+
 
 }
 
